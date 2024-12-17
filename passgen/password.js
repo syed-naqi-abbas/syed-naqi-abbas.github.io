@@ -91,16 +91,28 @@ let click = async (event)=>{
 
     await(load(prog));
 
-    if(Number.isInteger(length) && length>=4 && length<=100){
+    if(Number.isInteger(length)){
+      {
+        if(length>=4) {
+          if(length<=100) {
         passdiv.hidden=false;
         let word = genPass(length);
         pass.innerHTML = word;
         cpybtn.hidden = false;
+          }else{
+            passdiv.hidden=false;
+        pass.innerHTML = "Please enter a number less than 100"
+          }
+        }else{
+          passdiv.hidden=false;
+        pass.innerHTML = "Please enter a number greater than 3"
+        }
+      }
         
 
     }else{
         passdiv.hidden=false;
-        pass.innerHTML = "Please enter a valid length greater than 3 and less than 100"
+        pass.innerHTML = "Please enter a number"
     }
 }
 
