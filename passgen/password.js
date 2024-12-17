@@ -64,14 +64,13 @@ let delay = (delay)=>{
 
 let load = async (prog)=>{
     
-    prog.parentElement.removeAttribute("hidden");
-    //prog.parentElement.insertAdjacentHTML("afterend","<br><br>")
+    prog.parentElement.hidden=false;
     for(let i=1;i<=100;i++){
         await delay(25)
         prog.setAttribute("style",`width:${i}%`)
     }
     await delay(500);
-    prog.parentElement.setAttribute("hidden","")
+    prog.parentElement.hidden=true;
     prog.setAttribute("style",`width:0%`)
 }
 
@@ -83,22 +82,37 @@ let click = async (event)=>{
     let passdiv = document.getElementById("passdiv");
     let pass = document.getElementById("pass");
     let prog = document.getElementById("prog");
-
-    passdiv.setAttribute("hidden","");
+    let cpybtn = document.getElementById("cpybtn");
+    let cpymsg=document.getElementById("cpymsg");
+    
+    cpymsg.hidden=true;
+    passdiv.hidden=true;
+    cpybtn.hidden=true;
 
     await(load(prog));
 
     if(Number.isInteger(length) && length>=4){
-        passdiv.removeAttribute("hidden");
+        passdiv.hidden=false;
         let word = genPass(length);
         pass.innerHTML = word;
+        cpybtn.hidden = false;
         
 
     }else{
-        passdiv.removeAttribute("hidden");
+        passdiv.hidden=false;
         pass.innerHTML = "Please enter a valid length greater than 3"
     }
 }
 
+let copy = ()=>{
+    let pass = document.getElementById("pass").innerHTML;
+    navigator.clipboard.writeText(pass);
+    let cpymsg=document.getElementById("cpymsg");
+    cpymsg.hidden=false;
+}
+
+let btn=document.getElementById("btn");
+let cpybtn=document.getElementById("cpybtn");
 btn.addEventListener('click',click);
-let a = document.getElementById("prog");
+cpybtn.addEventListener('click',copy);
+
