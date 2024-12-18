@@ -29,6 +29,8 @@ async function create(mynum){
     let h = Number.parseInt(document.getElementById(`card${mynum}h`).value)
     let m = Number.parseInt(document.getElementById(`card${mynum}m`).value)
     let s = Number.parseInt(document.getElementById(`card${mynum}s`).value)
+    if(!(h>=0 && h<=60 && m>=0 && m<=60 && s>=0 && s<=60))
+        return;
     let time = h*60*60 + m*60 + s;
 
     let mydiv = document.getElementById(mynum.toString())
