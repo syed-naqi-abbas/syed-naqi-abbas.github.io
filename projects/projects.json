@@ -1,0 +1,56 @@
+[
+  {
+    "name": "NXP AIM 2025",
+    "desc": "Winner of NXP AIM 2025. Built a ROS2-based autonomous warehouse surveillance system with navigation, task planning, and computer vision.",
+    "image": "nxp",
+    "category": "robotics",
+    "links": {
+      "code": "https://github.com/syed-naqi-abbas/NXP_AIM_INDIA_2025"
+    }
+  },
+  {
+    "name": "Vision-and-Language Navigation",
+    "desc": "Instruction-guided navigation agent using CMA Policy in Habitat Simulator. Uses ResNet, LSTM encoders and cross-modal attention for multimodal navigation learning.",
+    "image": "vlnce",
+    "category": "ml",
+    "links": {
+      "code": "https://github.com/syed-naqi-abbas/vlnce"
+    }
+  },
+  {
+    "name": "Inter-IIT Tech Meet 14.0 - Eternal",
+    "desc": "Distributed robotic software system using ROS2 for warehouse inventory automation. Integrated LiDAR, IMU, encoders, and camera data to enable SLAM-based mapping.",
+    "image": "eternal",
+    "category": "robotics",
+    "links": {
+      "code": "https://github.com/syed-naqi-abbas/autonomous_warehouse_surveillance"
+    }
+  },
+  {
+    "name": "AgriBuddy - Geospatial Digital Twin",
+    "desc": "Geospatial interface for agriculture yield prediction with automated soil profile injection trained with XGBoost. Containerized FastAPI backend with Docker and Kubernetes.",
+    "image": "agri",
+    "category": "ml",
+    "links": {
+      "code": "https://github.com/syed-naqi-abbas/AgriBuddy"
+    }
+  },
+  {
+    "name": "Smart Farm Intrusion Detection",
+    "desc": "A low-power edge AI system for detecting and deterring wildlife entering farmland. Uses CV, and lightweight ML models to identify animals and trigger non-lethal deterrents.",
+    "image": "farm",
+    "category": "ml",
+    "links": {
+      "code": "https://github.com/syed-naqi-abbas/smart-farm-intrusion-detection"
+    }
+  },
+  {
+    "name": "RISC-V Assembler",
+    "desc": "Web-based RISC-V assembly IDE with an interactive code editor, real-time assembly, machine code generation and step-by-step debugging.",
+    "image": "risc",
+    "category": "architecture",
+    "links": {
+      "code": "https://github.com/syed-naqi-abbas/RISC-V_Assembler"
+    }
+  }
+]
